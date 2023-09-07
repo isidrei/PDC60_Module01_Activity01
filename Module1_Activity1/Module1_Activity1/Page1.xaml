@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module1_Activity1.Page1">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Layout-Specific" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="24">
+            <Label Text="Click the Purple Button for Page-Level" HorizontalTextAlignment="Center" FontSize="20"></Label>
+        </StackLayout>
+
+        <Grid>
+            <Grid.Resources>
+                <Style x:Key="FirstButton" TargetType="Button">
+                    <Setter Property="FontSize" Value="20" />
+                    <Setter Property="BackgroundColor" Value="Green" />
+                    <Setter Property="TextColor" Value="#ffffff" />
+                    <Setter Property="CornerRadius" Value="15" />
+                    <Setter Property="WidthRequest" Value="100" />
+                    <Setter Property="HeightRequest" Value="100" />
+                </Style>
+                <Style x:Key="SecondButton" TargetType="Button">
+                    <Setter Property="FontSize" Value="20" />
+                    <Setter Property="BackgroundColor" Value="Orange" />
+                    <Setter Property="TextColor" Value="#ffffff" />
+                    <Setter Property="CornerRadius" Value="15" />
+                    <Setter Property="WidthRequest" Value="100" />
+                    <Setter Property="HeightRequest" Value="100" />
+                </Style>
+                <Style x:Key="ThirdButton" TargetType="Button">
+                    <Setter Property="FontSize" Value="20" />
+                    <Setter Property="BackgroundColor" Value="Red" />
+                    <Setter Property="TextColor" Value="#ffffff" />
+                    <Setter Property="CornerRadius" Value="15" />
+                    <Setter Property="WidthRequest" Value="100" />
+                    <Setter Property="HeightRequest" Value="100" />
+                </Style>
+                <Style x:Key="FourthButton" TargetType="Button" >
+                    <Setter Property="FontSize" Value="20" />
+                    <Setter Property="BackgroundColor" Value="Purple" />
+                    <Setter Property="TextColor" Value="#ffffff" />
+                    <Setter Property="CornerRadius" Value="15" />
+                    <Setter Property="WidthRequest" Value="100" />
+                    <Setter Property="HeightRequest" Value="100" />
+                </Style>
+
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Button Text="First" Style="{StaticResource FirstButton}" Grid.Row="0"/>
+            <Button Text="Second" Style="{StaticResource SecondButton}" Grid.Row="1"/>
+            <Button Text="Third" Style="{StaticResource ThirdButton}" Grid.Row="2"/>
+            <Button Clicked="OnPage2" Text="Page-Level" Style="{StaticResource FourthButton}" Grid.Row="3"/>
+
+        </Grid>
+
+
+
+
+    </StackLayout>
+</ContentPage>
